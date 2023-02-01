@@ -4,7 +4,8 @@ require('database.php');
 //I used select from customers but because there is more than 
 // one customer id under the address database i used the 
 //join method
-$query = 'SELECT * FROM customers INNER JOIN addresses ON addresses.addressID = customers.customerID';// PUT YOUR SQL QUERY HERE
+$query = 'SELECT * FROM customers INNER JOIN addresses ON addresses.customerID = customers.customerID';
+//$query = 'SELECT * /*customerID, emailAddress, firstName, lastName, line1, city, state, zipCode, phone*/ FROM addresses INNER JOIN addresses ON addresses.addressID = customers.customerID';// PUT YOUR SQL QUERY HERE
 // Example: $query = 'SELECT * FROM customers';
 
 
